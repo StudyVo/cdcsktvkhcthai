@@ -2,175 +2,101 @@
 {
     partial class fUser
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonEdit;
+
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox1 = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = SystemColors.Info;
-            pictureBox1.Location = new Point(51, 38);
-            pictureBox1.Margin = new Padding(4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(178, 186);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(51, 252);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(66, 25);
-            label1.TabIndex = 1;
-            label1.Text = "Họ tên";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(51, 292);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 25);
-            label2.TabIndex = 2;
-            label2.Text = "Giới tính";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(38, 341);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(91, 25);
-            label3.TabIndex = 3;
-            label3.Text = "Ngày sinh";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(1351, 38);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(167, 25);
-            label4.TabIndex = 4;
-            label4.Text = "Trạng thái tài khoản";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(260, 38);
-            button1.Margin = new Padding(4);
-            button1.Name = "button1";
-            button1.Size = new Size(154, 36);
-            button1.TabIndex = 5;
-            button1.Text = "Tạo bài đăng";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(263, 82);
-            button2.Name = "button2";
-            button2.Size = new Size(151, 34);
-            button2.TabIndex = 6;
-            button2.Text = "Tạo nhóm mới";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
+            this.components = new System.ComponentModel.Container();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonEdit = new System.Windows.Forms.Button();
+
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+
             // textBox1
-            // 
-            textBox1.Location = new Point(124, 249);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 7;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(124, 341);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 31);
-            dateTimePicker1.TabIndex = 10;
-            // 
+            this.textBox1.Location = new System.Drawing.Point(130, 30);
+            this.textBox1.Size = new System.Drawing.Size(200, 22);
+
             // comboBox1
-            // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Nam ", "Nữ" });
-            comboBox1.Location = new Point(124, 292);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 11;
-            // 
+            this.comboBox1.Location = new System.Drawing.Point(130, 70);
+            this.comboBox1.Size = new System.Drawing.Size(200, 24);
+            this.comboBox1.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
+
+            // dateTimePicker1
+            this.dateTimePicker1.Location = new System.Drawing.Point(130, 110);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Format = DateTimePickerFormat.Short;
+
+            // pictureBox1
+            this.pictureBox1.Location = new System.Drawing.Point(350, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+
+            // label1
+            this.label1.Text = "Họ tên";
+            this.label1.Location = new System.Drawing.Point(30, 30);
+            this.label1.AutoSize = true;
+
+            // label2
+            this.label2.Text = "Giới tính";
+            this.label2.Location = new System.Drawing.Point(30, 70);
+            this.label2.AutoSize = true;
+
+            // label3
+            this.label3.Text = "Ngày sinh";
+            this.label3.Location = new System.Drawing.Point(30, 110);
+            this.label3.AutoSize = true;
+
+            // label4
+            this.label4.Text = "Trạng thái tài khoản";
+            this.label4.Location = new System.Drawing.Point(30, 150);
+            this.label4.AutoSize = true;
+
+            // buttonEdit
+            this.buttonEdit.Text = "Sửa thông tin";
+            this.buttonEdit.Location = new System.Drawing.Point(30, 200);
+            this.buttonEdit.Size = new System.Drawing.Size(120, 40);
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+
             // fUser
-            // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1618, 611);
-            Controls.Add(comboBox1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(pictureBox1);
-            Margin = new Padding(4);
-            Name = "fUser";
-            Text = "User";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.ClientSize = new System.Drawing.Size(550, 280);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.buttonEdit);
+            this.Text = "Thông tin người dùng";
+
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
-
-        #endregion
-
-        private PictureBox pictureBox1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
     }
 }
