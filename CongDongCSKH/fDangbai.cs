@@ -32,7 +32,7 @@ namespace CongDongCSKH
             txtBaiDang.ReadOnly = false;
             btnThemHinhAnh.Enabled = true;
         }
-    
+
 
         private void btnXoaBaiDang_Click(object sender, EventArgs e)
         {
@@ -81,8 +81,7 @@ namespace CongDongCSKH
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             // Cấu hình filter cho các loại file hình ảnh
-            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|" +
-                                   "JPEG Files|*.jpg;*.jpeg|" +
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|" + "JPEG Files|*.jpg;*.jpeg|" +
                                    "PNG Files|*.png|" +
                                    "GIF Files|*.gif|" +
                                    "BMP Files|*.bmp|" +

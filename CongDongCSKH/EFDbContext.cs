@@ -22,13 +22,29 @@ namespace CongDongCSKH
         public DbSet<Report> Reports { get; set; }
         public DbSet<BanAction> BanActions { get; set; }
         public DbSet<ChatbotMessage> ChatbotMessages { get; set; }
+        public DbSet<ChatSession> ChatSessions { get; set; }
         public DbSet<UserGroup> UserGroups { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["db"].ConnectionString);
+        }
+
         public void ConfigureServices(IServiceCollection services)
-        
-            => services.AddDbContext<EFDbContext>();
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            =>optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["db"].ConnectionString);
-        
+        {
+            services.AddDbContext<EFDbContext>();
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Thiết lập liên kết 1-nhiều giữa ChatSession và ChatbotMessage
+            modelBuilder.Entity<ChatbotMessage>()
+                .HasOne(m => m.ChatSession)
+                .WithMany(s => s.Messages)
+                .HasForeignKey(m => m.ChatSessionId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }

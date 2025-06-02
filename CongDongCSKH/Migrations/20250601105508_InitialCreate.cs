@@ -32,20 +32,19 @@ namespace CongDongCSKH.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ChatbotMessages",
+                name: "ChatSessions",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: true),
                     AdminId = table.Column<int>(type: "int", nullable: true),
-                    NoiDung = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LaTraLoiTuChatbot = table.Column<bool>(type: "bit", nullable: false),
-                    ThoiGian = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    TenDoanChat = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    ThoiGianTao = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ChatbotMessages", x => x.Id);
+                    table.PrimaryKey("PK_ChatSessions", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -202,6 +201,35 @@ namespace CongDongCSKH.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "ChatbotMessages",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ChatSessionId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: true),
+                    AdminId = table.Column<int>(type: "int", nullable: true),
+                    NoiDung = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LaTraLoiTuChatbot = table.Column<bool>(type: "bit", nullable: false),
+                    ThoiGian = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ChatbotMessages", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ChatbotMessages_ChatSessions_ChatSessionId",
+                        column: x => x.ChatSessionId,
+                        principalTable: "ChatSessions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ChatbotMessages_ChatSessionId",
+                table: "ChatbotMessages",
+                column: "ChatSessionId");
         }
 
         /// <inheritdoc />
@@ -239,6 +267,9 @@ namespace CongDongCSKH.Migrations
 
             migrationBuilder.DropTable(
                 name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "ChatSessions");
         }
     }
 }

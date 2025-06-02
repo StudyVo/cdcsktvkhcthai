@@ -4,99 +4,199 @@
     {
         private System.ComponentModel.IContainer components = null;
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button buttonEdit;
-
+        /// <summary>
+        /// Giải phóng tài nguyên đang sử dụng
+        /// </summary>
+        /// <param name="disposing">true nếu cần dispose managed resources</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null)) components.Dispose();
+            if (disposing && (components != null))
+                components.Dispose();
             base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.labelTitle = new Label();
+            this.labelHoTen = new Label();
+            this.labelGioiTinh = new Label();
+            this.labelNgaySinh = new Label();
+            this.labelEmail = new Label();
+            this.labelPhone = new Label();
+            this.labelAddress = new Label();
 
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.textBoxName = new TextBox();
+            this.comboBoxGender = new ComboBox();
+            this.dateTimePickerNgaySinh = new DateTimePicker();
+
+            this.pictureBoxAvatar = new PictureBox();
+            this.buttonEdit = new Button();
+            this.buttonLogout = new Button();
+            this.buttonMessage = new Button();
+            this.buttonChatbot = new Button();
+
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
             this.SuspendLayout();
 
-            // textBox1
-            this.textBox1.Location = new System.Drawing.Point(130, 30);
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
+            // labelTitle
+            this.labelTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            this.labelTitle.Location = new Point(150, 20);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new Size(350, 35);
+            this.labelTitle.Text = "THÔNG TIN NGƯỜI DÙNG";
+            this.labelTitle.TextAlign = ContentAlignment.MiddleCenter;
 
-            // comboBox1
-            this.comboBox1.Location = new System.Drawing.Point(130, 70);
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
+            // labelHoTen
+            this.labelHoTen.AutoSize = true;
+            this.labelHoTen.Location = new Point(40, 80);
+            this.labelHoTen.Name = "labelHoTen";
+            this.labelHoTen.Size = new Size(57, 20);
+            this.labelHoTen.Text = "Họ tên:";
 
-            // dateTimePicker1
-            this.dateTimePicker1.Location = new System.Drawing.Point(130, 110);
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.Format = DateTimePickerFormat.Short;
+            // textBoxName
+            this.textBoxName.Location = new Point(140, 77);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.ReadOnly = true;
+            this.textBoxName.Size = new Size(250, 27);
 
-            // pictureBox1
-            this.pictureBox1.Location = new System.Drawing.Point(350, 30);
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            // labelGioiTinh
+            this.labelGioiTinh.AutoSize = true;
+            this.labelGioiTinh.Location = new Point(40, 120);
+            this.labelGioiTinh.Name = "labelGioiTinh";
+            this.labelGioiTinh.Size = new Size(68, 20);
+            this.labelGioiTinh.Text = "Giới tính:";
 
-            // label1
-            this.label1.Text = "Họ tên";
-            this.label1.Location = new System.Drawing.Point(30, 30);
-            this.label1.AutoSize = true;
+            // comboBoxGender
+            this.comboBoxGender.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.comboBoxGender.Enabled = false;
+            this.comboBoxGender.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
+            this.comboBoxGender.Location = new Point(140, 117);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new Size(250, 28);
 
-            // label2
-            this.label2.Text = "Giới tính";
-            this.label2.Location = new System.Drawing.Point(30, 70);
-            this.label2.AutoSize = true;
+            // labelNgaySinh
+            this.labelNgaySinh.AutoSize = true;
+            this.labelNgaySinh.Location = new Point(40, 160);
+            this.labelNgaySinh.Name = "labelNgaySinh";
+            this.labelNgaySinh.Size = new Size(77, 20);
+            this.labelNgaySinh.Text = "Ngày sinh:";
 
-            // label3
-            this.label3.Text = "Ngày sinh";
-            this.label3.Location = new System.Drawing.Point(30, 110);
-            this.label3.AutoSize = true;
+            // dateTimePickerNgaySinh
+            this.dateTimePickerNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerNgaySinh.Enabled = false;
+            this.dateTimePickerNgaySinh.Format = DateTimePickerFormat.Custom;
+            this.dateTimePickerNgaySinh.Location = new Point(140, 157);
+            this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
+            this.dateTimePickerNgaySinh.Size = new Size(250, 27);
 
-            // label4
-            this.label4.Text = "Trạng thái tài khoản";
-            this.label4.Location = new System.Drawing.Point(30, 150);
-            this.label4.AutoSize = true;
+            // labelEmail
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new Point(40, 200);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new Size(49, 20);
+            this.labelEmail.Text = "Email:";
+
+            // labelPhone
+            this.labelPhone.AutoSize = true;
+            this.labelPhone.Location = new Point(40, 230);
+            this.labelPhone.Name = "labelPhone";
+            this.labelPhone.Size = new Size(100, 20);
+            this.labelPhone.Text = "Số điện thoại:";
+
+            // labelAddress
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Location = new Point(40, 260);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new Size(58, 20);
+            this.labelAddress.Text = "Địa chỉ:";
+
+            // pictureBoxAvatar
+            this.pictureBoxAvatar.BorderStyle = BorderStyle.FixedSingle;
+            this.pictureBoxAvatar.Location = new Point(430, 80);
+            this.pictureBoxAvatar.Name = "pictureBoxAvatar";
+            this.pictureBoxAvatar.Size = new Size(160, 160);
+            this.pictureBoxAvatar.SizeMode = PictureBoxSizeMode.Zoom;
 
             // buttonEdit
+            this.buttonEdit.Location = new Point(40, 310);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new Size(150, 35);
             this.buttonEdit.Text = "Sửa thông tin";
-            this.buttonEdit.Location = new System.Drawing.Point(30, 200);
-            this.buttonEdit.Size = new System.Drawing.Size(120, 40);
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new EventHandler(this.buttonEdit_Click);
+
+            // buttonLogout
+            this.buttonLogout.Location = new Point(210, 310);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new Size(150, 35);
+            this.buttonLogout.Text = "Đăng xuất";
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new EventHandler(this.buttonLogout_Click);
+
+            // buttonMessage
+            this.buttonMessage.Location = new Point(380, 310);
+            this.buttonMessage.Name = "buttonMessage";
+            this.buttonMessage.Size = new Size(150, 35);
+            this.buttonMessage.Text = "Nhắn tin";
+            this.buttonMessage.UseVisualStyleBackColor = true;
+            this.buttonMessage.Click += new EventHandler(this.buttonMessage_Click);
+
+            // buttonChatbot
+            this.buttonChatbot.Location = new Point(40, 360);
+            this.buttonChatbot.Name = "buttonChatbot";
+            this.buttonChatbot.Size = new Size(490, 35);
+            this.buttonChatbot.Text = "Nhắn tin với Chatbot";
+            this.buttonChatbot.UseVisualStyleBackColor = true;
+            this.buttonChatbot.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            this.buttonChatbot.BackColor = Color.LightSteelBlue;
+            this.buttonChatbot.Click += new EventHandler(this.buttonChatbot_Click);
 
             // fUser
-            this.ClientSize = new System.Drawing.Size(550, 280);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.buttonEdit);
+            this.AutoScaleDimensions = new SizeF(8F, 20F);
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.ClientSize = new Size(640, 420);
+            this.Controls.AddRange(new Control[]
+            {
+                labelTitle,
+                labelHoTen, textBoxName,
+                labelGioiTinh, comboBoxGender,
+                labelNgaySinh, dateTimePickerNgaySinh,
+                labelEmail, labelPhone, labelAddress,
+                pictureBoxAvatar,
+                buttonEdit, buttonLogout, buttonMessage,
+                buttonChatbot
+            });
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "fUser";
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = "Thông tin người dùng";
 
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        #endregion
+
+        private Label labelTitle;
+        private Label labelHoTen;
+        private Label labelGioiTinh;
+        private Label labelNgaySinh;
+        private Label labelEmail;
+        private Label labelPhone;
+        private Label labelAddress;
+
+        private TextBox textBoxName;
+        private ComboBox comboBoxGender;
+        private DateTimePicker dateTimePickerNgaySinh;
+
+        private PictureBox pictureBoxAvatar;
+        private Button buttonEdit;
+        private Button buttonLogout;
+        private Button buttonMessage;
+        private Button buttonChatbot;
     }
 }

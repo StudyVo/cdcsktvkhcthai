@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CongDongCSKH.Migrations
 {
     [DbContext(typeof(EFDbContext))]
-    [Migration("20250530125922_InitialCreate")]
+    [Migration("20250601105508_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -63,6 +63,33 @@ namespace CongDongCSKH.Migrations
                     b.ToTable("BanActions");
                 });
 
+            modelBuilder.Entity("CongDongCSKH.Models.ChatSession", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("AdminId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TenDoanChat")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("ThoiGianTao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ChatSessions");
+                });
+
             modelBuilder.Entity("CongDongCSKH.Models.ChatbotMessage", b =>
                 {
                     b.Property<int>("Id")
@@ -72,6 +99,9 @@ namespace CongDongCSKH.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int?>("AdminId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ChatSessionId")
                         .HasColumnType("int");
 
                     b.Property<bool>("LaTraLoiTuChatbot")
@@ -88,6 +118,8 @@ namespace CongDongCSKH.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ChatSessionId");
 
                     b.ToTable("ChatbotMessages");
                 });
@@ -383,6 +415,22 @@ namespace CongDongCSKH.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserGroups");
+                });
+
+            modelBuilder.Entity("CongDongCSKH.Models.ChatbotMessage", b =>
+                {
+                    b.HasOne("CongDongCSKH.Models.ChatSession", "ChatSession")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatSessionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ChatSession");
+                });
+
+            modelBuilder.Entity("CongDongCSKH.Models.ChatSession", b =>
+                {
+                    b.Navigation("Messages");
                 });
 #pragma warning restore 612, 618
         }

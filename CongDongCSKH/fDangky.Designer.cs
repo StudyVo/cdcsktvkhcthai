@@ -2,15 +2,12 @@
 {
     partial class fDangky
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Giải phóng tài nguyên đang được sử dụng
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true nếu muốn giải phóng tài nguyên</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,203 +20,193 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///  Thiết lập giao diện và khởi tạo các control
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            linkLabel1 = new LinkLabel();
-            txtName = new TextBox();
-            txtPassword = new TextBox();
-            txtEmail = new TextBox();
-            btSave = new Button();
-            btClose = new Button();
-            ngaysinh = new DateTimePicker();
-            label6 = new Label();
-            toolTip1 = new ToolTip(components);
-            txtConfirmPassword = new TextBox();
-            label7 = new Label();
-            SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(359, 43);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Đăng ký";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(210, 118);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Tên đăng nhập";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(210, 161);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Mật khẩu";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(210, 315);
-            label4.Name = "label4";
-            label4.Size = new Size(46, 20);
-            label4.TabIndex = 3;
-            label4.Text = "Email";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(258, 490);
-            label5.Name = "label5";
-            label5.Size = new Size(113, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Đã có tài khoản";
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(395, 490);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(82, 20);
-            linkLabel1.TabIndex = 5;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Đăng nhập";
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(346, 115);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(188, 27);
-            txtName.TabIndex = 0;
-            // 
+            this.components = new System.ComponentModel.Container();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelHoTen = new System.Windows.Forms.Label();
+            this.labelTenDn = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelConfirmPassword = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelNgaySinh = new System.Windows.Forms.Label();
+
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtTenDn = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+
+            this.ngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.btSave = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+
+            this.SuspendLayout();
+
+            // labelTitle
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTitle.Location = new System.Drawing.Point(280, 20);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(150, 32);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "ĐĂNG KÝ";
+
+            // labelHoTen
+            this.labelHoTen.AutoSize = true;
+            this.labelHoTen.Location = new System.Drawing.Point(130, 70);
+            this.labelHoTen.Name = "labelHoTen";
+            this.labelHoTen.Size = new System.Drawing.Size(74, 20);
+            this.labelHoTen.TabIndex = 1;
+            this.labelHoTen.Text = "Họ và tên";
+
+            // txtHoTen
+            this.txtHoTen.Location = new System.Drawing.Point(280, 67);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(250, 27);
+            this.txtHoTen.TabIndex = 0;
+
+            // labelTenDn
+            this.labelTenDn.AutoSize = true;
+            this.labelTenDn.Location = new System.Drawing.Point(130, 110);
+            this.labelTenDn.Name = "labelTenDn";
+            this.labelTenDn.Size = new System.Drawing.Size(107, 20);
+            this.labelTenDn.TabIndex = 2;
+            this.labelTenDn.Text = "Tên đăng nhập";
+
+            // txtTenDn
+            this.txtTenDn.Location = new System.Drawing.Point(280, 107);
+            this.txtTenDn.Name = "txtTenDn";
+            this.txtTenDn.Size = new System.Drawing.Size(250, 27);
+            this.txtTenDn.TabIndex = 1;
+
+            // labelPassword
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(130, 150);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(70, 20);
+            this.labelPassword.TabIndex = 3;
+            this.labelPassword.Text = "Mật khẩu";
+
             // txtPassword
-            // 
-            txtPassword.Location = new Point(346, 161);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(188, 27);
-            txtPassword.TabIndex = 1;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(346, 308);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(188, 27);
-            txtEmail.TabIndex = 3;
-            // 
-            // btSave
-            // 
-            btSave.Location = new Point(258, 396);
-            btSave.Name = "btSave";
-            btSave.Size = new Size(94, 29);
-            btSave.TabIndex = 4;
-            btSave.Text = "Đăng ký";
-            btSave.UseVisualStyleBackColor = true;
-            btSave.Click += btSave_Click;
-            // 
-            // btClose
-            // 
-            btClose.Location = new Point(383, 396);
-            btClose.Name = "btClose";
-            btClose.Size = new Size(94, 29);
-            btClose.TabIndex = 5;
-            btClose.Text = "Đóng";
-            btClose.UseVisualStyleBackColor = true;
-            btClose.Click += btClose_Click;
-            // 
-            // ngaysinh
-            // 
-            ngaysinh.CustomFormat = "hh/MM/yyyy";
-            ngaysinh.Format = DateTimePickerFormat.Custom;
-            ngaysinh.Location = new Point(346, 257);
-            ngaysinh.Name = "ngaysinh";
-            ngaysinh.Size = new Size(188, 27);
-            ngaysinh.TabIndex = 2;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(210, 257);
-            label6.Name = "label6";
-            label6.Size = new Size(74, 20);
-            label6.TabIndex = 12;
-            label6.Text = "Ngày sinh";
-            // 
+            this.txtPassword.Location = new System.Drawing.Point(280, 147);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(250, 27);
+            this.txtPassword.TabIndex = 2;
+
+            // labelConfirmPassword
+            this.labelConfirmPassword.AutoSize = true;
+            this.labelConfirmPassword.Location = new System.Drawing.Point(130, 190);
+            this.labelConfirmPassword.Name = "labelConfirmPassword";
+            this.labelConfirmPassword.Size = new System.Drawing.Size(130, 20);
+            this.labelConfirmPassword.TabIndex = 4;
+            this.labelConfirmPassword.Text = "Nhập lại mật khẩu";
+
             // txtConfirmPassword
-            // 
-            txtConfirmPassword.Location = new Point(346, 208);
-            txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.Size = new Size(188, 27);
-            txtConfirmPassword.TabIndex = 13;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(210, 211);
-            label7.Name = "label7";
-            label7.Size = new Size(130, 20);
-            label7.TabIndex = 14;
-            label7.Text = "Nhập lại mật khẩu";
-            // 
+            this.txtConfirmPassword.Location = new System.Drawing.Point(280, 187);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
+            this.txtConfirmPassword.Size = new System.Drawing.Size(250, 27);
+            this.txtConfirmPassword.TabIndex = 3;
+
+            // labelEmail
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(130, 230);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(46, 20);
+            this.labelEmail.TabIndex = 5;
+            this.labelEmail.Text = "Email";
+
+            // txtEmail
+            this.txtEmail.Location = new System.Drawing.Point(280, 227);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(250, 27);
+            this.txtEmail.TabIndex = 4;
+
+            // labelNgaySinh
+            this.labelNgaySinh.AutoSize = true;
+            this.labelNgaySinh.Location = new System.Drawing.Point(130, 270);
+            this.labelNgaySinh.Name = "labelNgaySinh";
+            this.labelNgaySinh.Size = new System.Drawing.Size(74, 20);
+            this.labelNgaySinh.TabIndex = 6;
+            this.labelNgaySinh.Text = "Ngày sinh";
+
+            // ngaysinh
+            this.ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngaysinh.CustomFormat = "dd/MM/yyyy";
+            this.ngaysinh.Location = new System.Drawing.Point(280, 267);
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.Size = new System.Drawing.Size(250, 27);
+            this.ngaysinh.TabIndex = 5;
+
+            // btSave
+            this.btSave.Location = new System.Drawing.Point(280, 320);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(100, 35);
+            this.btSave.TabIndex = 6;
+            this.btSave.Text = "Đăng ký";
+            this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
+
+            // btClose
+            this.btClose.Location = new System.Drawing.Point(430, 320);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(100, 35);
+            this.btClose.TabIndex = 7;
+            this.btClose.Text = "Đóng";
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+
             // fDangky
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(794, 519);
-            Controls.Add(label7);
-            Controls.Add(txtConfirmPassword);
-            Controls.Add(label6);
-            Controls.Add(ngaysinh);
-            Controls.Add(btClose);
-            Controls.Add(btSave);
-            Controls.Add(txtEmail);
-            Controls.Add(txtPassword);
-            Controls.Add(txtName);
-            Controls.Add(linkLabel1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "fDangky";
-            Text = "Tạo tài khoản ";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AcceptButton = this.btSave;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(700, 400);
+            this.Controls.Add(this.btClose);
+            this.Controls.Add(this.btSave);
+            this.Controls.Add(this.ngaysinh);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtConfirmPassword);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtTenDn);
+            this.Controls.Add(this.txtHoTen);
+            this.Controls.Add(this.labelNgaySinh);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.labelConfirmPassword);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelTenDn);
+            this.Controls.Add(this.labelHoTen);
+            this.Controls.Add(this.labelTitle);
+
+            this.Name = "fDangky";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tạo tài khoản";
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private LinkLabel linkLabel1;
-        private TextBox txtName;
-        private TextBox txtPassword;
-        private TextBox txtEmail;
-        private Button btSave;
-        private Button btClose;
-        private DateTimePicker ngaysinh;
-        private Label label6;
-        private ToolTip toolTip1;
-        private TextBox txtConfirmPassword;
-        private Label label7;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelHoTen;
+        private System.Windows.Forms.Label labelTenDn;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label labelConfirmPassword;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelNgaySinh;
+
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtTenDn;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.DateTimePicker ngaysinh;
+        private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

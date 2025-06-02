@@ -17,19 +17,23 @@ namespace CongDongCSKH
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
+        private void cb1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Chọn ảnh đại diện";
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
 
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+                pictureBox1.Image = Image.FromFile(imagePath);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
     }
 }

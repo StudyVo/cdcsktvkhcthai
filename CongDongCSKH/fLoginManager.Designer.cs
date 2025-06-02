@@ -3,14 +3,14 @@
     partial class fLoginManager
     {
         /// <summary>
-        /// Required designer variable.
+        ///  Tài nguyên đang sử dụng
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Giải phóng tài nguyên đang dùng
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true nếu giải phóng thủ công</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,15 +23,14 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///  Thiết lập giao diện và khởi tạo các điều khiển
         /// </summary>
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            labelTitle = new Label();
+            labelUsername = new Label();
+            labelPassword = new Label();
             txtName = new TextBox();
             txtPassword = new TextBox();
             btSave = new Button();
@@ -39,95 +38,101 @@
             toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
-            // label1
+            // labelTitle
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(387, 65);
-            label1.Name = "label1";
-            label1.Size = new Size(82, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Đăng nhập";
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            labelTitle.Location = new Point(213, 39);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(347, 32);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "ĐĂNG NHẬP QUẢN TRỊ VIÊN";
             // 
-            // label2
+            // labelUsername
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(246, 180);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 20);
-            label2.TabIndex = 1;
-            label2.Tag = "";
-            label2.Text = "Tên đăng nhập";
+            labelUsername.AutoSize = true;
+            labelUsername.Location = new Point(180, 110);
+            labelUsername.Name = "labelUsername";
+            labelUsername.Size = new Size(184, 20);
+            labelUsername.TabIndex = 1;
+            labelUsername.Text = "Tên đăng nhập hoặc email";
             // 
-            // label3
+            // labelPassword
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(246, 234);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Mật khẩu";
+            labelPassword.AutoSize = true;
+            labelPassword.Location = new Point(180, 160);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(70, 20);
+            labelPassword.TabIndex = 2;
+            labelPassword.Text = "Mật khẩu";
             // 
             // txtName
             // 
-            txtName.Location = new Point(359, 180);
+            txtName.Location = new Point(370, 107);
             txtName.Name = "txtName";
-            txtName.Size = new Size(195, 27);
+            txtName.Size = new Size(220, 27);
             txtName.TabIndex = 0;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(359, 234);
+            txtPassword.Location = new Point(370, 157);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(195, 27);
-            txtPassword.TabIndex = 2;
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(220, 27);
+            txtPassword.TabIndex = 1;
             // 
             // btSave
             // 
-            btSave.Location = new Point(294, 333);
+            btSave.Location = new Point(370, 210);
             btSave.Name = "btSave";
-            btSave.Size = new Size(94, 29);
-            btSave.TabIndex = 3;
+            btSave.Size = new Size(100, 35);
+            btSave.TabIndex = 2;
             btSave.Text = "Đăng nhập";
             btSave.UseVisualStyleBackColor = true;
             btSave.Click += btSave_Click;
             // 
             // btClose
             // 
-            btClose.Location = new Point(414, 333);
+            btClose.Location = new Point(490, 210);
             btClose.Name = "btClose";
-            btClose.Size = new Size(94, 29);
-            btClose.TabIndex = 4;
+            btClose.Size = new Size(100, 35);
+            btClose.TabIndex = 3;
             btClose.Text = "Đóng";
             btClose.UseVisualStyleBackColor = true;
             btClose.Click += btClose_Click;
             // 
             // fLoginManager
             // 
+            AcceptButton = btSave;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btClose);
-            Controls.Add(btSave);
-            Controls.Add(txtPassword);
+            ClientSize = new Size(800, 320);
+            Controls.Add(labelTitle);
+            Controls.Add(labelUsername);
             Controls.Add(txtName);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(labelPassword);
+            Controls.Add(txtPassword);
+            Controls.Add(btSave);
+            Controls.Add(btClose);
             Name = "fLoginManager";
-            Text = "fLoginManage";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Đăng nhập quản trị";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private TextBox txtName;
-        private TextBox txtPassword;
-        private Button btSave;
-        private Button btClose;
-        private ToolTip toolTip1;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelPassword;
+
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPassword;
+
+        private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.Button btClose;
+
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

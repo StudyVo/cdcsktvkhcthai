@@ -1,4 +1,6 @@
-﻿namespace CongDongCSKH
+﻿using System.Windows.Forms;
+
+namespace CongDongCSKH
 {
     partial class fDangbai
     {
