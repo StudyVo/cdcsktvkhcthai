@@ -41,5 +41,7 @@ namespace CongDongCSKH.Models
 
         [StringLength(20)]
         public string? GioiTinh { get; set; }
+
+        public bool BiChan { get; set; } = false; // 0: không bị chặn, 1: bị chặn
     }
 }

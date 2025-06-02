@@ -103,83 +103,103 @@ namespace CongDongCSKH
 
         private void btnManageUsers_Click(object sender, EventArgs e)
         {
-            LoadUserList();
+            dataGridViewMain.Columns.Clear(); // Xóa các cột cũ
+            dataGridViewMain.DataSource = db.Users.ToList(); // Nạp dữ liệu
+
+            // Không cho phép chỉnh sửa cột "BịChặn"
+            dataGridViewMain.Columns["BiChan"].ReadOnly = true;
+
+            AddActionColumns(); // Thêm 2 nút Lock / Unlock
         }
 
-        private void btnManagePosts_Click(object sender, EventArgs e)
+        //private void btnManagePosts_Click(object sender, EventArgs e)
+        //{
+        //    dataGridViewMain.Columns.Clear(); // Xóa các cột cũ
+        //    dataGridViewMain.DataSource = db.Posts.ToList(); // Nạp dữ liệu
+
+        //    // Không cho phép chỉnh sửa cột "BịChặn"
+        //    dataGridViewMain.Columns["BiChan"].ReadOnly = true;
+
+
+        //    AddActionColumns(); // Thêm 2 nút Lock / Unlock
+        //}
+
+        private void AddActionColumns()
         {
-            LoadPostList();
+            // Thêm nút LOCK
+            DataGridViewButtonColumn lockButton = new DataGridViewButtonColumn();
+            lockButton.Name = "LockUnLock";
+            lockButton.HeaderText = "Trạng thái";
+            lockButton.Text = "Chặn / Mở chặn";
+            lockButton.UseColumnTextForButtonValue = true;
+            dataGridViewMain.Columns.Add(lockButton);
         }
 
-        private void LoadUserList()
+        private void dataGridViewMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.Columns.Clear();
-            dataGridView1.DataSource = db.Users.ToList();
-            dataGridView1.Columns["BiChan"].ReadOnly = true;
-            AddActionColumn();
-        }
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return; // Bỏ qua header
 
-        private void LoadPostList()
-        {
-            dataGridView1.Columns.Clear();
-            dataGridView1.DataSource = db.Posts.ToList();
-            dataGridView1.Columns["BiChan"].ReadOnly = true;
-            AddActionColumn();
-        }
+            string columnName = dataGridViewMain.Columns[e.ColumnIndex].Name;
 
-        private void AddActionColumn()
-        {
-            if (!dataGridView1.Columns.Contains("LockUnLock"))
+            if (columnName == "LockUnLock")
             {
-                var lockButton = new DataGridViewButtonColumn
+                int id = Convert.ToInt32(dataGridViewMain.Rows[e.RowIndex].Cells["Id"].Value);
+
+                // Kiểm tra kiểu dữ liệu đang hiển thị trong DataGridView
+                var dataSource = dataGridViewMain.DataSource;
+
+                //kiểm tra xem nếu dữ liệu đang hiển thị là danh sach người dùng hay bài đăng
+                if (dataSource is List<User>)
                 {
-                    Name = "LockUnLock",
-                    HeaderText = "Trạng thái",
-                    Text = "Chặn / Mở chặn",
-                    UseColumnTextForButtonValue = true
-                };
-                dataGridView1.Columns.Add(lockButton);
-            }
-        }
+                    var user = db.Users.FirstOrDefault(u => u.Id == id);
+                    if (user != null)
+                    {
+                        string message;
+                        if (user.BiChan)
+                        {
+                            message = "Bạn có muốn mở chặn người dùng này không?";
+                        }
+                        else
+                        {
+                            message = "Bạn có muốn chặn người dùng này không?";
+                        }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+                        DialogResult result = MessageBox.Show(message, "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            string columnName = dataGridView1.Columns[e.ColumnIndex].Name;
-            if (columnName != "LockUnLock") return;
-
-            int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
-            var dataSource = dataGridView1.DataSource;
-
-            if (dataSource is List<User>)
-            {
-                var user = db.Users.Find(id);
-                if (user != null && ConfirmToggle(user.BiChan, "người dùng"))
+                        if (result == DialogResult.Yes)
+                        {
+                            user.BiChan = !user.BiChan;
+                            db.SaveChanges();
+                            dataGridViewMain.DataSource = db.Users.ToList();
+                        }
+                    }
+                }
+                else if (dataSource is List<Post>)
                 {
-                    user.BiChan = !user.BiChan;
-                    db.SaveChanges();
-                    LoadUserList();
+                    var post = db.Posts.FirstOrDefault(p => p.Id == id);
+                    if (post != null)
+                    {
+                        string message;
+                        if (post.BiChan)
+                        {
+                            message = "Bạn có muốn mở chặn bài đăng này không?";
+                        }
+                        else
+                        {
+                            message = "Bạn có muốn chặn bài đăng này không?";
+                        }
+
+                        DialogResult result = MessageBox.Show(message, "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            post.BiChan = !post.BiChan;
+                            db.SaveChanges();
+                            dataGridViewMain.DataSource = db.Posts.ToList();
+                        }
+                    }
                 }
             }
-            else if (dataSource is List<Post>)
-            {
-                var post = db.Posts.Find(id);
-                if (post != null && ConfirmToggle(post.BiChan, "bài đăng"))
-                {
-                    post.BiChan = !post.BiChan;
-                    db.SaveChanges();
-                    LoadPostList();
-                }
-            }
-        }
-
-        private bool ConfirmToggle(bool isBanned, string objectName)
-        {
-            string message = isBanned
-                ? $"Bạn có muốn mở chặn {objectName} này không?"
-                : $"Bạn có muốn chặn {objectName} này không?";
-            return MessageBox.Show(message, "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         private void btnMessage_Click(object sender, EventArgs e)
@@ -206,6 +226,18 @@ namespace CongDongCSKH
             {
                 MessageBox.Show("Lỗi khi mở chatbot: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btXemDanhSachNguoiDung_Click(object sender, EventArgs e)
+        {
+            dataGridViewMain.Columns.Clear(); // Xóa các cột cũ
+            dataGridViewMain.DataSource = db.Posts.ToList(); // Nạp dữ liệu
+
+            // Không cho phép chỉnh sửa cột "BịChặn"
+            dataGridViewMain.Columns["BiChan"].ReadOnly = true;
+
+
+            AddActionColumns(); // Thêm 2 nút Lock / Unlock
         }
     }
 }

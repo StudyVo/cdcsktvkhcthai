@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CongDongCSKH.Models
 {
@@ -23,9 +19,15 @@ namespace CongDongCSKH.Models
         public int UserId { get; set; }
 
         public bool BiChan { get; set; } = false;
+
+        // ✅ Constructor mặc định cho Entity Framework
+        public Course()
+        {
+        }
+
+        // ✅ Constructor tùy chọn để dùng trong code
         public Course(int id, string name, string description)
         {
-
             Id = id;
             TenKhoaHoc = name;
             MoTa = description;
