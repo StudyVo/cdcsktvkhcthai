@@ -23,5 +23,12 @@ namespace CongDongCSKH.Models
         public int UserId { get; set; }
 
         public bool BiChan { get; set; } = false;
+        public Course(int id, string name, string description)
+        {
+
+            Id = id;
+            TenKhoaHoc = name;
+            MoTa = description;
+        }
     }
 }
