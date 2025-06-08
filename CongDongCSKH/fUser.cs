@@ -159,5 +159,21 @@ namespace CongDongCSKH
                 Close();
             }
         }
+
+        private void btnTaobaidang_Click(object sender, EventArgs e)
+        {
+            // Tạo và hiển thị form fDangbai
+            fDangbai DangbaiForm = new fDangbai();
+            DangbaiForm.ShowDialog();
+        }
+
+        private void bnTaonhom_Click(object sender, EventArgs e)
+        {
+            // Tạo thể hiện của form fTaonhom
+            fTaonhom taoNhomForm = new fTaonhom();
+
+           
+            taoNhomForm.ShowDialog();
+        }
     }
 }
