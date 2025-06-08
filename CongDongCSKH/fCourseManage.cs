@@ -194,6 +194,9 @@ namespace CongDongCSKH
             UpdateButtonStates();
         }
 
+        private void lblCourseName_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

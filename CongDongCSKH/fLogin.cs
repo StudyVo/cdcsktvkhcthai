@@ -63,14 +63,18 @@ namespace CongDongCSKH
             {
                 using (var db = new EFDbContext())
                 {
-                    var user = db.Users
-                        .FirstOrDefault(u =>
-                            (u.TenDn == input || u.Email == input)
-                            && u.Password == password);
+                    var user = db.Users.FirstOrDefault(u => (u.TenDn == input || u.Email == input) && u.Password == password);
 
                     if (user != null)
                     {
+                        if (user.BiChan)
+                        {
+                            //MessageBox.Show("Tài khoản của bạn đã bị chặn. Vui lòng liên hệ quản trị viên.", "Tài khoản bị chặn", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            toolTip1.Show("Tài khoản của bạn đã bị chặn. Vui lòng liên hệ quản trị viên.", txtName, 0, -20, 4000);
+                            return;
+                        }
                         // Đăng nhập thành công
+                        toolTip1.Show("Đăng nhập thành công!", txtName, 0, -20, 3000);
                         this.Hide();
                         var userForm = new fUser(user.Id);
                         userForm.FormClosed += (s, args) => this.Show(); // Trở về sau khi user đóng form
@@ -78,7 +82,8 @@ namespace CongDongCSKH
                     }
                     else
                     {
-                        MessageBox.Show("Tên đăng nhập/email hoặc mật khẩu không đúng.", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //MessageBox.Show("Tên đăng nhập/email hoặc mật khẩu không đúng.", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        toolTip1.Show("Tên đăng nhập/email hoặc mật khẩu không đúng.", txtName, 0, -20, 3000);
                         txtPassword.Clear();
                         txtPassword.Focus();
                     }
@@ -86,7 +91,8 @@ namespace CongDongCSKH
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi hệ thống:\n" + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Đã xảy ra lỗi hệ thống:\n" + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                toolTip1.Show("Đã xảy ra lỗi hệ thống:\n" + ex.Message, txtName, 0, -20, 3000);
             }
         }
 

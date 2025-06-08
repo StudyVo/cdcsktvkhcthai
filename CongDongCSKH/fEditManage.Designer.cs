@@ -43,174 +43,155 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblTitle.Location = new Point(225, 25);
-            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Location = new Point(212, 9);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(478, 38);
+            lblTitle.Size = new Size(412, 32);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "CHỈNH SỬA THÔNG TIN QUẢN TRỊ";
             // 
             // lblHoTen
             // 
-            lblHoTen.Location = new Point(50, 100);
-            lblHoTen.Margin = new Padding(4, 0, 4, 0);
+            lblHoTen.Location = new Point(40, 80);
             lblHoTen.Name = "lblHoTen";
-            lblHoTen.Size = new Size(162, 31);
+            lblHoTen.Size = new Size(104, 25);
             lblHoTen.TabIndex = 1;
             lblHoTen.Text = "Họ tên:";
             // 
             // lblEmail
             // 
-            lblEmail.Location = new Point(50, 100);
-            lblEmail.Margin = new Padding(4, 0, 4, 0);
+            lblEmail.Location = new Point(40, 201);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(162, 31);
+            lblEmail.Size = new Size(104, 25);
             lblEmail.TabIndex = 3;
             lblEmail.Text = "Email:";
             // 
             // lblGioiTinh
             // 
-            lblGioiTinh.Location = new Point(50, 100);
-            lblGioiTinh.Margin = new Padding(4, 0, 4, 0);
+            lblGioiTinh.Location = new Point(40, 163);
             lblGioiTinh.Name = "lblGioiTinh";
-            lblGioiTinh.Size = new Size(162, 31);
+            lblGioiTinh.Size = new Size(104, 25);
             lblGioiTinh.TabIndex = 5;
             lblGioiTinh.Text = "Giới tính:";
             // 
             // lblNgaySinh
             // 
-            lblNgaySinh.Location = new Point(50, 100);
-            lblNgaySinh.Margin = new Padding(4, 0, 4, 0);
+            lblNgaySinh.Location = new Point(40, 121);
             lblNgaySinh.Name = "lblNgaySinh";
-            lblNgaySinh.Size = new Size(162, 31);
+            lblNgaySinh.Size = new Size(104, 25);
             lblNgaySinh.TabIndex = 7;
             lblNgaySinh.Text = "Ngày sinh:";
             // 
             // lblMoTa
             // 
-            lblMoTa.Location = new Point(50, 100);
-            lblMoTa.Margin = new Padding(4, 0, 4, 0);
+            lblMoTa.Location = new Point(40, 241);
             lblMoTa.Name = "lblMoTa";
-            lblMoTa.Size = new Size(162, 31);
+            lblMoTa.Size = new Size(104, 25);
             lblMoTa.TabIndex = 9;
             lblMoTa.Text = "Mô tả:";
             // 
             // lblMatKhauCu
             // 
-            lblMatKhauCu.Location = new Point(50, 100);
-            lblMatKhauCu.Margin = new Padding(4, 0, 4, 0);
+            lblMatKhauCu.Location = new Point(528, 244);
             lblMatKhauCu.Name = "lblMatKhauCu";
-            lblMatKhauCu.Size = new Size(162, 31);
+            lblMatKhauCu.Size = new Size(130, 25);
             lblMatKhauCu.TabIndex = 11;
             lblMatKhauCu.Text = "Mật khẩu cũ:";
             // 
             // lblMatKhauMoi
             // 
-            lblMatKhauMoi.Location = new Point(50, 100);
-            lblMatKhauMoi.Margin = new Padding(4, 0, 4, 0);
+            lblMatKhauMoi.Location = new Point(528, 280);
             lblMatKhauMoi.Name = "lblMatKhauMoi";
-            lblMatKhauMoi.Size = new Size(162, 31);
+            lblMatKhauMoi.Size = new Size(130, 25);
             lblMatKhauMoi.TabIndex = 13;
             lblMatKhauMoi.Text = "Mật khẩu mới:";
             // 
             // lblXacNhanMatKhauMoi
             // 
-            lblXacNhanMatKhauMoi.Location = new Point(50, 100);
-            lblXacNhanMatKhauMoi.Margin = new Padding(4, 0, 4, 0);
+            lblXacNhanMatKhauMoi.Location = new Point(528, 313);
             lblXacNhanMatKhauMoi.Name = "lblXacNhanMatKhauMoi";
-            lblXacNhanMatKhauMoi.Size = new Size(162, 31);
+            lblXacNhanMatKhauMoi.Size = new Size(159, 25);
             lblXacNhanMatKhauMoi.TabIndex = 15;
             lblXacNhanMatKhauMoi.Text = "Xác nhận mật khẩu:";
             // 
             // txtHoTen
             // 
-            txtHoTen.Location = new Point(250, 223);
-            txtHoTen.Margin = new Padding(4);
+            txtHoTen.Location = new Point(147, 77);
             txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(374, 31);
+            txtHoTen.Size = new Size(300, 27);
             txtHoTen.TabIndex = 2;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(225, 100);
-            txtEmail.Margin = new Padding(4);
+            txtEmail.Location = new Point(147, 201);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(374, 31);
+            txtEmail.Size = new Size(300, 27);
             txtEmail.TabIndex = 4;
             // 
             // cbGioiTinh
             // 
             cbGioiTinh.DropDownStyle = ComboBoxStyle.DropDownList;
             cbGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
-            cbGioiTinh.Location = new Point(225, 100);
-            cbGioiTinh.Margin = new Padding(4);
+            cbGioiTinh.Location = new Point(147, 160);
             cbGioiTinh.Name = "cbGioiTinh";
-            cbGioiTinh.Size = new Size(374, 33);
+            cbGioiTinh.Size = new Size(300, 28);
             cbGioiTinh.TabIndex = 6;
             // 
             // dtpNgaySinh
             // 
             dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             dtpNgaySinh.Format = DateTimePickerFormat.Custom;
-            dtpNgaySinh.Location = new Point(225, 100);
-            dtpNgaySinh.Margin = new Padding(4);
+            dtpNgaySinh.Location = new Point(147, 119);
             dtpNgaySinh.Name = "dtpNgaySinh";
-            dtpNgaySinh.Size = new Size(374, 31);
+            dtpNgaySinh.Size = new Size(300, 27);
             dtpNgaySinh.TabIndex = 8;
             // 
             // txtMoTa
             // 
-            txtMoTa.Location = new Point(225, 100);
-            txtMoTa.Margin = new Padding(4);
+            txtMoTa.Location = new Point(147, 241);
             txtMoTa.Multiline = true;
             txtMoTa.Name = "txtMoTa";
-            txtMoTa.Size = new Size(374, 74);
+            txtMoTa.Size = new Size(300, 224);
             txtMoTa.TabIndex = 10;
             // 
             // txtMatKhauCu
             // 
-            txtMatKhauCu.Location = new Point(225, 100);
-            txtMatKhauCu.Margin = new Padding(4);
+            txtMatKhauCu.Location = new Point(699, 244);
             txtMatKhauCu.Name = "txtMatKhauCu";
-            txtMatKhauCu.Size = new Size(374, 31);
+            txtMatKhauCu.Size = new Size(162, 27);
             txtMatKhauCu.TabIndex = 12;
             txtMatKhauCu.UseSystemPasswordChar = true;
             // 
             // txtMatKhauMoi
             // 
-            txtMatKhauMoi.Location = new Point(225, 100);
-            txtMatKhauMoi.Margin = new Padding(4);
+            txtMatKhauMoi.Location = new Point(699, 277);
             txtMatKhauMoi.Name = "txtMatKhauMoi";
-            txtMatKhauMoi.Size = new Size(374, 31);
+            txtMatKhauMoi.Size = new Size(162, 27);
             txtMatKhauMoi.TabIndex = 14;
             txtMatKhauMoi.UseSystemPasswordChar = true;
             // 
             // txtXacNhanMatKhauMoi
             // 
-            txtXacNhanMatKhauMoi.Location = new Point(225, 100);
-            txtXacNhanMatKhauMoi.Margin = new Padding(4);
+            txtXacNhanMatKhauMoi.Location = new Point(699, 310);
             txtXacNhanMatKhauMoi.Name = "txtXacNhanMatKhauMoi";
-            txtXacNhanMatKhauMoi.Size = new Size(374, 31);
+            txtXacNhanMatKhauMoi.Size = new Size(162, 27);
             txtXacNhanMatKhauMoi.TabIndex = 16;
             txtXacNhanMatKhauMoi.UseSystemPasswordChar = true;
             // 
             // pictureBoxAvatar
             // 
             pictureBoxAvatar.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxAvatar.Location = new Point(650, 100);
-            pictureBoxAvatar.Margin = new Padding(4);
+            pictureBoxAvatar.Location = new Point(699, 77);
             pictureBoxAvatar.Name = "pictureBoxAvatar";
-            pictureBoxAvatar.Size = new Size(174, 174);
+            pictureBoxAvatar.Size = new Size(162, 151);
             pictureBoxAvatar.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxAvatar.TabIndex = 17;
             pictureBoxAvatar.TabStop = false;
             // 
             // btnChonAnh
             // 
-            btnChonAnh.Location = new Point(650, 100);
-            btnChonAnh.Margin = new Padding(4);
+            btnChonAnh.Location = new Point(528, 80);
             btnChonAnh.Name = "btnChonAnh";
-            btnChonAnh.Size = new Size(175, 38);
+            btnChonAnh.Size = new Size(140, 30);
             btnChonAnh.TabIndex = 18;
             btnChonAnh.Text = "Chọn ảnh đại diện";
             btnChonAnh.UseVisualStyleBackColor = true;
@@ -218,31 +199,31 @@
             // 
             // btnLuu
             // 
-            btnLuu.Location = new Point(250, 100);
-            btnLuu.Margin = new Padding(4);
+            btnLuu.BackColor = Color.Lime;
+            btnLuu.Location = new Point(548, 430);
             btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(150, 44);
+            btnLuu.Size = new Size(120, 35);
             btnLuu.TabIndex = 19;
             btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = true;
+            btnLuu.UseVisualStyleBackColor = false;
             btnLuu.Click += btnLuu_Click;
             // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(438, 100);
-            btnHuy.Margin = new Padding(4);
+            btnHuy.BackColor = Color.Red;
+            btnHuy.Location = new Point(699, 430);
             btnHuy.Name = "btnHuy";
-            btnHuy.Size = new Size(150, 44);
+            btnHuy.Size = new Size(120, 35);
             btnHuy.TabIndex = 20;
             btnHuy.Text = "Hủy";
-            btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.UseVisualStyleBackColor = false;
             btnHuy.Click += btnHuy_Click;
             // 
             // fEditManage
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(900, 399);
+            ClientSize = new Size(935, 549);
             Controls.Add(lblTitle);
             Controls.Add(lblHoTen);
             Controls.Add(txtHoTen);
@@ -265,7 +246,6 @@
             Controls.Add(btnLuu);
             Controls.Add(btnHuy);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(4);
             MaximizeBox = false;
             Name = "fEditManage";
             StartPosition = FormStartPosition.CenterScreen;

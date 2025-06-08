@@ -199,5 +199,15 @@ namespace CongDongCSKH
 
             return true;
         }
+
+        private void labelEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMoTa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

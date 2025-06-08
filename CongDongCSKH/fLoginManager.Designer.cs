@@ -83,22 +83,24 @@
             // 
             // btSave
             // 
+            btSave.BackColor = Color.Lime;
             btSave.Location = new Point(370, 210);
             btSave.Name = "btSave";
             btSave.Size = new Size(100, 35);
             btSave.TabIndex = 2;
             btSave.Text = "Đăng nhập";
-            btSave.UseVisualStyleBackColor = true;
+            btSave.UseVisualStyleBackColor = false;
             btSave.Click += btSave_Click;
             // 
             // btClose
             // 
+            btClose.BackColor = Color.Red;
             btClose.Location = new Point(490, 210);
             btClose.Name = "btClose";
             btClose.Size = new Size(100, 35);
             btClose.TabIndex = 3;
             btClose.Text = "Đóng";
-            btClose.UseVisualStyleBackColor = true;
+            btClose.UseVisualStyleBackColor = false;
             btClose.Click += btClose_Click;
             // 
             // fLoginManager

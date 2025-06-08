@@ -45,16 +45,16 @@
             // dgvCourses
             // 
             dgvCourses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCourses.Location = new Point(42, 12);
+            dgvCourses.Location = new Point(37, 12);
             dgvCourses.Name = "dgvCourses";
             dgvCourses.RowHeadersWidth = 51;
-            dgvCourses.Size = new Size(703, 215);
+            dgvCourses.Size = new Size(625, 215);
             dgvCourses.TabIndex = 0;
             // 
             // lblCourseID
             // 
             lblCourseID.AutoSize = true;
-            lblCourseID.Location = new Point(58, 254);
+            lblCourseID.Location = new Point(52, 259);
             lblCourseID.Name = "lblCourseID";
             lblCourseID.Size = new Size(24, 20);
             lblCourseID.TabIndex = 2;
@@ -63,85 +63,90 @@
             // lblCourseName
             // 
             lblCourseName.AutoSize = true;
-            lblCourseName.Location = new Point(58, 288);
+            lblCourseName.Location = new Point(52, 298);
             lblCourseName.Name = "lblCourseName";
-            lblCourseName.Size = new Size(33, 20);
+            lblCourseName.Size = new Size(32, 20);
             lblCourseName.TabIndex = 3;
             lblCourseName.Text = "Tên";
+            lblCourseName.Click += lblCourseName_Click;
             // 
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.Location = new Point(58, 331);
+            lblDescription.Location = new Point(52, 331);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(49, 20);
+            lblDescription.Size = new Size(48, 20);
             lblDescription.TabIndex = 4;
             lblDescription.Text = "Mô tả";
             // 
             // txtCourseID
             // 
-            txtCourseID.Location = new Point(142, 256);
+            txtCourseID.Location = new Point(126, 256);
             txtCourseID.Name = "txtCourseID";
             txtCourseID.ReadOnly = true;
-            txtCourseID.Size = new Size(125, 27);
+            txtCourseID.Size = new Size(112, 27);
             txtCourseID.TabIndex = 5;
             // 
             // txtCourseName
             // 
-            txtCourseName.Location = new Point(142, 289);
+            txtCourseName.Location = new Point(126, 298);
             txtCourseName.Name = "txtCourseName";
-            txtCourseName.Size = new Size(357, 27);
+            txtCourseName.Size = new Size(318, 27);
             txtCourseName.TabIndex = 6;
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(142, 339);
+            txtDescription.Location = new Point(126, 339);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(357, 63);
+            txtDescription.Size = new Size(527, 121);
             txtDescription.TabIndex = 7;
             txtDescription.Text = "";
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(673, 417);
+            btnClear.BackColor = Color.Red;
+            btnClear.Location = new Point(597, 488);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(94, 29);
+            btnClear.Size = new Size(84, 29);
             btnClear.TabIndex = 8;
             btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
+            btnClear.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(458, 417);
+            btnDelete.BackColor = Color.FromArgb(255, 128, 128);
+            btnDelete.Location = new Point(402, 488);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(94, 29);
+            btnDelete.Size = new Size(84, 29);
             btnDelete.TabIndex = 9;
             btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnEdit
             // 
-            btnEdit.Location = new Point(229, 417);
+            btnEdit.BackColor = Color.FromArgb(255, 255, 128);
+            btnEdit.Location = new Point(212, 488);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(94, 29);
+            btnEdit.Size = new Size(84, 29);
             btnEdit.TabIndex = 10;
             btnEdit.Text = "Edit";
-            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(42, 417);
+            btnAdd.BackColor = Color.Lime;
+            btnAdd.Location = new Point(36, 488);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(94, 29);
+            btnAdd.Size = new Size(84, 29);
             btnAdd.TabIndex = 11;
             btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.UseVisualStyleBackColor = false;
             // 
             // fCourseManage
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(740, 529);
             Controls.Add(btnAdd);
             Controls.Add(btnEdit);
             Controls.Add(btnDelete);

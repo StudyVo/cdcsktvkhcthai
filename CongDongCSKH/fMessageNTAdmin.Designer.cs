@@ -15,127 +15,153 @@
 
         private void InitializeComponent()
         {
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.labelSearch = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.dgvAdmins = new System.Windows.Forms.DataGridView();
-            this.dgvHistory = new System.Windows.Forms.DataGridView();
-            this.panelConversation = new System.Windows.Forms.Panel();
-            this.labelContent = new System.Windows.Forms.Label();
-            this.txtContent = new System.Windows.Forms.TextBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.btnCloseConversation = new System.Windows.Forms.Button();
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmins)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
-            this.SuspendLayout();
-
+            labelTitle = new Label();
+            labelSearch = new Label();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
+            dgvAdmins = new DataGridView();
+            dgvHistory = new DataGridView();
+            panelConversation = new Panel();
+            labelContent = new Label();
+            txtContent = new TextBox();
+            btnSend = new Button();
+            btnCloseConversation = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvAdmins).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvHistory).BeginInit();
+            SuspendLayout();
+            // 
             // labelTitle
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.Location = new System.Drawing.Point(300, 10);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(400, 30);
-            this.labelTitle.Text = "NHẮN TIN QUẢN TRỊ VIÊN";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
+            // 
+            labelTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            labelTitle.Location = new Point(300, 10);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(400, 30);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "NHẮN TIN QUẢN TRỊ VIÊN";
+            labelTitle.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // labelSearch
-            this.labelSearch.Location = new System.Drawing.Point(20, 60);
-            this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(140, 25);
-            this.labelSearch.Text = "Tìm quản trị viên:";
-
+            // 
+            labelSearch.Location = new Point(20, 60);
+            labelSearch.Name = "labelSearch";
+            labelSearch.Size = new Size(140, 25);
+            labelSearch.TabIndex = 1;
+            labelSearch.Text = "Tìm quản trị viên:";
+            // 
             // txtSearch
-            this.txtSearch.Location = new System.Drawing.Point(160, 60);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(250, 27);
-
+            // 
+            txtSearch.Location = new Point(160, 60);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(250, 27);
+            txtSearch.TabIndex = 2;
+            // 
             // btnSearch
-            this.btnSearch.Location = new System.Drawing.Point(420, 58);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(80, 30);
-            this.btnSearch.Text = "Tìm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-
+            // 
+            btnSearch.Location = new Point(420, 58);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(80, 30);
+            btnSearch.TabIndex = 3;
+            btnSearch.Text = "Tìm";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
             // dgvAdmins
-            this.dgvAdmins.Location = new System.Drawing.Point(20, 100);
-            this.dgvAdmins.Name = "dgvAdmins";
-            this.dgvAdmins.ReadOnly = true;
-            this.dgvAdmins.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAdmins.Size = new System.Drawing.Size(470, 150);
-            this.dgvAdmins.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmins_CellClick);
-
+            // 
+            dgvAdmins.ColumnHeadersHeight = 29;
+            dgvAdmins.Location = new Point(20, 100);
+            dgvAdmins.Name = "dgvAdmins";
+            dgvAdmins.ReadOnly = true;
+            dgvAdmins.RowHeadersWidth = 51;
+            dgvAdmins.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAdmins.Size = new Size(470, 150);
+            dgvAdmins.TabIndex = 4;
+            dgvAdmins.CellClick += dgvAdmins_CellClick;
+            // 
             // dgvHistory
-            this.dgvHistory.Location = new System.Drawing.Point(510, 60);
-            this.dgvHistory.Name = "dgvHistory";
-            this.dgvHistory.ReadOnly = true;
-            this.dgvHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistory.Size = new System.Drawing.Size(360, 190);
-            this.dgvHistory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistory_CellClick);
-
+            // 
+            dgvHistory.ColumnHeadersHeight = 29;
+            dgvHistory.Location = new Point(510, 60);
+            dgvHistory.Name = "dgvHistory";
+            dgvHistory.ReadOnly = true;
+            dgvHistory.RowHeadersWidth = 51;
+            dgvHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvHistory.Size = new Size(360, 190);
+            dgvHistory.TabIndex = 5;
+            dgvHistory.CellClick += dgvHistory_CellClick;
+            // 
             // panelConversation
-            this.panelConversation.AutoScroll = true;
-            this.panelConversation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelConversation.Location = new System.Drawing.Point(20, 270);
-            this.panelConversation.Name = "panelConversation";
-            this.panelConversation.Size = new System.Drawing.Size(850, 300);
-
-            // btnCloseConversation
-            this.btnCloseConversation.Location = new System.Drawing.Point(820, 240);
-            this.btnCloseConversation.Name = "btnCloseConversation";
-            this.btnCloseConversation.Size = new System.Drawing.Size(50, 25);
-            this.btnCloseConversation.Text = "x Đóng";
-            this.btnCloseConversation.UseVisualStyleBackColor = true;
-            this.btnCloseConversation.Click += new System.EventHandler(this.btnCloseConversation_Click);
-            this.btnCloseConversation.Visible = false;
-
+            // 
+            panelConversation.AutoScroll = true;
+            panelConversation.BorderStyle = BorderStyle.FixedSingle;
+            panelConversation.Location = new Point(20, 283);
+            panelConversation.Name = "panelConversation";
+            panelConversation.Size = new Size(850, 287);
+            panelConversation.TabIndex = 6;
+            // 
             // labelContent
-            this.labelContent.Location = new System.Drawing.Point(20, 585);
-            this.labelContent.Name = "labelContent";
-            this.labelContent.Size = new System.Drawing.Size(150, 25);
-            this.labelContent.Text = "Nội dung tin nhắn:";
-
+            // 
+            labelContent.Location = new Point(20, 585);
+            labelContent.Name = "labelContent";
+            labelContent.Size = new Size(150, 25);
+            labelContent.TabIndex = 8;
+            labelContent.Text = "Nội dung tin nhắn:";
+            // 
             // txtContent
-            this.txtContent.Location = new System.Drawing.Point(170, 585);
-            this.txtContent.Multiline = true;
-            this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(570, 60);
-
+            // 
+            txtContent.Location = new Point(170, 585);
+            txtContent.Multiline = true;
+            txtContent.Name = "txtContent";
+            txtContent.Size = new Size(570, 121);
+            txtContent.TabIndex = 9;
+            // 
             // btnSend
-            this.btnSend.Location = new System.Drawing.Point(750, 585);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(120, 60);
-            this.btnSend.Text = "Gửi";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-
+            // 
+            btnSend.BackColor = Color.Cyan;
+            btnSend.Location = new Point(750, 585);
+            btnSend.Name = "btnSend";
+            btnSend.Size = new Size(120, 60);
+            btnSend.TabIndex = 10;
+            btnSend.Text = "Gửi";
+            btnSend.UseVisualStyleBackColor = false;
+            btnSend.Click += btnSend_Click;
+            // 
+            // btnCloseConversation
+            // 
+            btnCloseConversation.Location = new Point(820, 252);
+            btnCloseConversation.Name = "btnCloseConversation";
+            btnCloseConversation.Size = new Size(50, 25);
+            btnCloseConversation.TabIndex = 7;
+            btnCloseConversation.Text = "x Đóng";
+            btnCloseConversation.UseVisualStyleBackColor = true;
+            btnCloseConversation.Visible = false;
+            btnCloseConversation.Click += btnCloseConversation_Click;
+            // 
             // fMessageNTAdmin
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 670);
-            this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.labelSearch);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.dgvAdmins);
-            this.Controls.Add(this.dgvHistory);
-            this.Controls.Add(this.panelConversation);
-            this.Controls.Add(this.btnCloseConversation);
-            this.Controls.Add(this.labelContent);
-            this.Controls.Add(this.txtContent);
-            this.Controls.Add(this.btnSend);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.Name = "fMessageNTAdmin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nhắn tin quản trị viên";
-            this.Load += new System.EventHandler(this.fMessageNTAdmin_Load);
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmins)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(900, 762);
+            Controls.Add(labelTitle);
+            Controls.Add(labelSearch);
+            Controls.Add(txtSearch);
+            Controls.Add(btnSearch);
+            Controls.Add(dgvAdmins);
+            Controls.Add(dgvHistory);
+            Controls.Add(panelConversation);
+            Controls.Add(btnCloseConversation);
+            Controls.Add(labelContent);
+            Controls.Add(txtContent);
+            Controls.Add(btnSend);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            Name = "fMessageNTAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Nhắn tin quản trị viên";
+            Load += fMessageNTAdmin_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvAdmins).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvHistory).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

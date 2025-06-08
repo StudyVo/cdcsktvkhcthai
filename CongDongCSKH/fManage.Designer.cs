@@ -47,7 +47,7 @@
             // labelHoTen
             // 
             labelHoTen.AutoSize = true;
-            labelHoTen.Location = new Point(30, 210);
+            labelHoTen.Location = new Point(230, 30);
             labelHoTen.Name = "labelHoTen";
             labelHoTen.Size = new Size(57, 20);
             labelHoTen.TabIndex = 1;
@@ -56,7 +56,7 @@
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(30, 240);
+            labelEmail.Location = new Point(230, 60);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(49, 20);
             labelEmail.TabIndex = 2;
@@ -65,7 +65,7 @@
             // labelMoTa
             // 
             labelMoTa.AutoSize = true;
-            labelMoTa.Location = new Point(30, 270);
+            labelMoTa.Location = new Point(230, 124);
             labelMoTa.Name = "labelMoTa";
             labelMoTa.Size = new Size(51, 20);
             labelMoTa.TabIndex = 3;
@@ -74,7 +74,7 @@
             // labelNgaySinh
             // 
             labelNgaySinh.AutoSize = true;
-            labelNgaySinh.Location = new Point(30, 300);
+            labelNgaySinh.Location = new Point(230, 90);
             labelNgaySinh.Name = "labelNgaySinh";
             labelNgaySinh.Size = new Size(77, 20);
             labelNgaySinh.TabIndex = 4;
@@ -82,27 +82,29 @@
             // 
             // btnEditInfo
             // 
-            btnEditInfo.Location = new Point(30, 330);
+            btnEditInfo.BackColor = Color.Lime;
+            btnEditInfo.Location = new Point(1625, 30);
             btnEditInfo.Name = "btnEditInfo";
             btnEditInfo.Size = new Size(130, 35);
             btnEditInfo.TabIndex = 5;
             btnEditInfo.Text = "Sửa thông tin";
-            btnEditInfo.UseVisualStyleBackColor = true;
+            btnEditInfo.UseVisualStyleBackColor = false;
             btnEditInfo.Click += btnEditInfo_Click;
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(30, 380);
+            btnLogout.BackColor = Color.Yellow;
+            btnLogout.Location = new Point(1778, 30);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(130, 35);
             btnLogout.TabIndex = 6;
             btnLogout.Text = "Đăng xuất";
-            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
             // 
             // btnViewCourses
             // 
-            btnViewCourses.Location = new Point(230, 30);
+            btnViewCourses.Location = new Point(30, 270);
             btnViewCourses.Name = "btnViewCourses";
             btnViewCourses.Size = new Size(180, 35);
             btnViewCourses.TabIndex = 7;
@@ -112,7 +114,7 @@
             // 
             // btnManageUsers
             // 
-            btnManageUsers.Location = new Point(230, 75);
+            btnManageUsers.Location = new Point(30, 315);
             btnManageUsers.Name = "btnManageUsers";
             btnManageUsers.Size = new Size(180, 35);
             btnManageUsers.TabIndex = 8;
@@ -122,14 +124,15 @@
             // 
             // btnPosts
             // 
-            btnPosts.Location = new Point(6, 1);
+            btnPosts.Location = new Point(1344, 206);
             btnPosts.Name = "btnPosts";
-            btnPosts.Size = new Size(75, 23);
+            btnPosts.Size = new Size(78, 26);
             btnPosts.TabIndex = 9;
+            btnPosts.Text = "Post";
             // 
             // btnMessage
             // 
-            btnMessage.Location = new Point(230, 165);
+            btnMessage.Location = new Point(30, 405);
             btnMessage.Name = "btnMessage";
             btnMessage.Size = new Size(180, 35);
             btnMessage.TabIndex = 10;
@@ -139,7 +142,7 @@
             // 
             // btnChatbot
             // 
-            btnChatbot.Location = new Point(230, 210);
+            btnChatbot.Location = new Point(30, 450);
             btnChatbot.Name = "btnChatbot";
             btnChatbot.Size = new Size(180, 35);
             btnChatbot.TabIndex = 11;
@@ -150,10 +153,10 @@
             // dataGridViewMain
             // 
             dataGridViewMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewMain.Location = new Point(230, 270);
+            dataGridViewMain.Location = new Point(216, 270);
             dataGridViewMain.Name = "dataGridViewMain";
             dataGridViewMain.RowHeadersWidth = 51;
-            dataGridViewMain.Size = new Size(1785, 600);
+            dataGridViewMain.Size = new Size(1737, 600);
             dataGridViewMain.TabIndex = 0;
             dataGridViewMain.CellContentClick += dataGridViewMain_CellContentClick;
             // 
@@ -161,15 +164,15 @@
             // 
             labelHint.AutoSize = true;
             labelHint.ForeColor = Color.Red;
-            labelHint.Location = new Point(230, 245);
+            labelHint.Location = new Point(34, 236);
             labelHint.Name = "labelHint";
-            labelHint.Size = new Size(273, 20);
+            labelHint.Size = new Size(307, 20);
             labelHint.TabIndex = 12;
-            labelHint.Text = "Chọn các chức năng trên để xem chi tiết";
+            labelHint.Text = "Chọn các chức năng bên dưới để xem chi tiết";
             // 
             // btXemDanhSachNguoiDung
             // 
-            btXemDanhSachNguoiDung.Location = new Point(230, 125);
+            btXemDanhSachNguoiDung.Location = new Point(30, 365);
             btXemDanhSachNguoiDung.Name = "btXemDanhSachNguoiDung";
             btXemDanhSachNguoiDung.Size = new Size(180, 29);
             btXemDanhSachNguoiDung.TabIndex = 13;

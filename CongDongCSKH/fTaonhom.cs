@@ -35,5 +35,10 @@ namespace CongDongCSKH
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
+
+        private void lbRiengtu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

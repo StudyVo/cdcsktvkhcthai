@@ -27,125 +27,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.labelUsername = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-
-            this.btLogin = new System.Windows.Forms.Button();
-            this.btClose = new System.Windows.Forms.Button();
-            this.btLoginManager = new System.Windows.Forms.Button();
-
-            this.labelNoAccount = new System.Windows.Forms.Label();
-            this.linkDangKy = new System.Windows.Forms.LinkLabel();
-
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-
-            this.SuspendLayout();
-
+            components = new System.ComponentModel.Container();
+            labelTitle = new Label();
+            labelUsername = new Label();
+            labelPassword = new Label();
+            txtName = new TextBox();
+            txtPassword = new TextBox();
+            btLogin = new Button();
+            btClose = new Button();
+            btLoginManager = new Button();
+            labelNoAccount = new Label();
+            linkDangKy = new LinkLabel();
+            toolTip1 = new ToolTip(components);
+            SuspendLayout();
+            // 
             // labelTitle
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTitle.Location = new System.Drawing.Point(340, 40);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(139, 32);
-            this.labelTitle.Text = "ĐĂNG NHẬP";
-
+            // 
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            labelTitle.Location = new Point(340, 40);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(161, 32);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "ĐĂNG NHẬP";
+            // 
             // labelUsername
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(220, 120);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(169, 20);
-            this.labelUsername.Text = "Tên đăng nhập hoặc email";
-
-            // txtName
-            this.txtName.Location = new System.Drawing.Point(400, 117);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(220, 27);
-            this.txtName.TabIndex = 0;
-
+            // 
+            labelUsername.AutoSize = true;
+            labelUsername.Location = new Point(210, 120);
+            labelUsername.Name = "labelUsername";
+            labelUsername.Size = new Size(184, 20);
+            labelUsername.TabIndex = 1;
+            labelUsername.Text = "Tên đăng nhập hoặc email";
+            // 
             // labelPassword
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(220, 170);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(70, 20);
-            this.labelPassword.Text = "Mật khẩu";
-
+            // 
+            labelPassword.AutoSize = true;
+            labelPassword.Location = new Point(210, 170);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(70, 20);
+            labelPassword.TabIndex = 2;
+            labelPassword.Text = "Mật khẩu";
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(400, 117);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(220, 27);
+            txtName.TabIndex = 0;
+            // 
             // txtPassword
-            this.txtPassword.Location = new System.Drawing.Point(400, 167);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(220, 27);
-            this.txtPassword.TabIndex = 1;
-
+            // 
+            txtPassword.Location = new Point(400, 167);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(220, 27);
+            txtPassword.TabIndex = 1;
+            // 
             // btLogin
-            this.btLogin.Location = new System.Drawing.Point(400, 220);
-            this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(100, 35);
-            this.btLogin.Text = "Đăng nhập";
-            this.btLogin.TabIndex = 2;
-            this.btLogin.UseVisualStyleBackColor = true;
-            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
-
+            // 
+            btLogin.BackColor = Color.Lime;
+            btLogin.Location = new Point(400, 220);
+            btLogin.Name = "btLogin";
+            btLogin.Size = new Size(100, 35);
+            btLogin.TabIndex = 2;
+            btLogin.Text = "Đăng nhập";
+            btLogin.UseVisualStyleBackColor = false;
+            btLogin.Click += btLogin_Click;
+            // 
             // btClose
-            this.btClose.Location = new System.Drawing.Point(520, 220);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(100, 35);
-            this.btClose.Text = "Đóng";
-            this.btClose.TabIndex = 3;
-            this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
-
+            // 
+            btClose.BackColor = Color.Red;
+            btClose.Location = new Point(520, 220);
+            btClose.Name = "btClose";
+            btClose.Size = new Size(100, 35);
+            btClose.TabIndex = 3;
+            btClose.Text = "Đóng";
+            btClose.UseVisualStyleBackColor = false;
+            btClose.Click += btClose_Click;
+            // 
             // btLoginManager
-            this.btLoginManager.Location = new System.Drawing.Point(680, 20);
-            this.btLoginManager.Name = "btLoginManager";
-            this.btLoginManager.Size = new System.Drawing.Size(90, 30);
-            this.btLoginManager.Text = "Quản trị";
-            this.btLoginManager.TabIndex = 4;
-            this.btLoginManager.UseVisualStyleBackColor = true;
-            this.btLoginManager.Click += new System.EventHandler(this.btLoginManager_Click);
-
+            // 
+            btLoginManager.BackColor = Color.Yellow;
+            btLoginManager.FlatStyle = FlatStyle.Popup;
+            btLoginManager.ForeColor = SystemColors.ControlText;
+            btLoginManager.Location = new Point(680, 20);
+            btLoginManager.Name = "btLoginManager";
+            btLoginManager.Size = new Size(90, 30);
+            btLoginManager.TabIndex = 4;
+            btLoginManager.Text = "Quản trị";
+            btLoginManager.UseVisualStyleBackColor = false;
+            btLoginManager.Click += btLoginManager_Click;
+            // 
             // labelNoAccount
-            this.labelNoAccount.AutoSize = true;
-            this.labelNoAccount.Location = new System.Drawing.Point(300, 290);
-            this.labelNoAccount.Name = "labelNoAccount";
-            this.labelNoAccount.Size = new System.Drawing.Size(145, 20);
-            this.labelNoAccount.Text = "Chưa có tài khoản?";
-
+            // 
+            labelNoAccount.AutoSize = true;
+            labelNoAccount.Location = new Point(300, 290);
+            labelNoAccount.Name = "labelNoAccount";
+            labelNoAccount.Size = new Size(135, 20);
+            labelNoAccount.TabIndex = 5;
+            labelNoAccount.Text = "Chưa có tài khoản?";
+            // 
             // linkDangKy
-            this.linkDangKy.AutoSize = true;
-            this.linkDangKy.Location = new System.Drawing.Point(450, 290);
-            this.linkDangKy.Name = "linkDangKy";
-            this.linkDangKy.Size = new System.Drawing.Size(60, 20);
-            this.linkDangKy.TabStop = true;
-            this.linkDangKy.Text = "Đăng ký";
-            this.linkDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDangKy_LinkClicked);
-
+            // 
+            linkDangKy.AutoSize = true;
+            linkDangKy.Location = new Point(450, 290);
+            linkDangKy.Name = "linkDangKy";
+            linkDangKy.Size = new Size(63, 20);
+            linkDangKy.TabIndex = 6;
+            linkDangKy.TabStop = true;
+            linkDangKy.Text = "Đăng ký";
+            linkDangKy.LinkClicked += linkDangKy_LinkClicked;
+            // 
             // fLogin
-            this.AcceptButton = this.btLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 380);
-            this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.labelUsername);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.btLogin);
-            this.Controls.Add(this.btClose);
-            this.Controls.Add(this.btLoginManager);
-            this.Controls.Add(this.labelNoAccount);
-            this.Controls.Add(this.linkDangKy);
-            this.Name = "fLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng nhập";
-            this.Load += new System.EventHandler(this.fLogin_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            AcceptButton = btLogin;
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 380);
+            Controls.Add(labelTitle);
+            Controls.Add(labelUsername);
+            Controls.Add(txtName);
+            Controls.Add(labelPassword);
+            Controls.Add(txtPassword);
+            Controls.Add(btLogin);
+            Controls.Add(btClose);
+            Controls.Add(btLoginManager);
+            Controls.Add(labelNoAccount);
+            Controls.Add(linkDangKy);
+            Name = "fLogin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Đăng nhập";
+            Load += fLogin_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

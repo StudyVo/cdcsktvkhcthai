@@ -42,9 +42,9 @@ namespace CongDongCSKH
                     comboBoxGender.SelectedItem = currentUser.GioiTinh ?? "Không rõ";
                     dateTimePickerNgaySinh.Value = currentUser.NgaySinh ?? DateTime.Today;
 
-                    labelEmail.Text = $"Email: {currentUser.Email}";
-                    labelPhone.Text = $"Số điện thoại: {currentUser.Phone ?? "Chưa cập nhật"}";
-                    labelAddress.Text = $"Địa chỉ: {currentUser.Address ?? "Chưa cập nhật"}";
+                    textBoxEmail.Text = currentUser.Email;
+                    textBoxPhone.Text = currentUser.Phone ?? "Chưa cập nhật";
+                    textBoxAddress.Text = currentUser.Address ?? "Chưa cập nhật";
 
                     LoadAvatar(currentUser.HinhDaiDien);
                 }

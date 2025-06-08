@@ -30,69 +30,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanelSessions = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelMessages = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtInput = new System.Windows.Forms.TextBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            flowLayoutPanelSessions = new FlowLayoutPanel();
+            flowLayoutPanelMessages = new FlowLayoutPanel();
+            txtInput = new TextBox();
+            btnSend = new Button();
+            SuspendLayout();
             // 
             // flowLayoutPanelSessions
             // 
-            this.flowLayoutPanelSessions.AutoScroll = true;
-            this.flowLayoutPanelSessions.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanelSessions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelSessions.Location = new System.Drawing.Point(12, 12);
-            this.flowLayoutPanelSessions.Name = "flowLayoutPanelSessions";
-            this.flowLayoutPanelSessions.Size = new System.Drawing.Size(200, 400);
-            this.flowLayoutPanelSessions.TabIndex = 0;
+            flowLayoutPanelSessions.AutoScroll = true;
+            flowLayoutPanelSessions.BackColor = Color.WhiteSmoke;
+            flowLayoutPanelSessions.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanelSessions.Location = new Point(12, 12);
+            flowLayoutPanelSessions.Name = "flowLayoutPanelSessions";
+            flowLayoutPanelSessions.Size = new Size(200, 408);
+            flowLayoutPanelSessions.TabIndex = 0;
             // 
             // flowLayoutPanelMessages
             // 
-            this.flowLayoutPanelMessages.AutoScroll = true;
-            this.flowLayoutPanelMessages.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanelMessages.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelMessages.Location = new System.Drawing.Point(220, 12);
-            this.flowLayoutPanelMessages.Name = "flowLayoutPanelMessages";
-            this.flowLayoutPanelMessages.Size = new System.Drawing.Size(550, 360);
-            this.flowLayoutPanelMessages.TabIndex = 1;
+            flowLayoutPanelMessages.AutoScroll = true;
+            flowLayoutPanelMessages.BackColor = Color.White;
+            flowLayoutPanelMessages.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanelMessages.Location = new Point(220, 12);
+            flowLayoutPanelMessages.Name = "flowLayoutPanelMessages";
+            flowLayoutPanelMessages.Size = new Size(550, 360);
+            flowLayoutPanelMessages.TabIndex = 1;
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(220, 380);
-            this.txtInput.Multiline = true;
-            this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(460, 40);
-            this.txtInput.TabIndex = 2;
-            this.txtInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInput_KeyDown);
+            txtInput.Location = new Point(220, 380);
+            txtInput.Multiline = true;
+            txtInput.Name = "txtInput";
+            txtInput.Size = new Size(460, 40);
+            txtInput.TabIndex = 2;
+            txtInput.KeyDown += txtInput_KeyDown;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(690, 380);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(80, 40);
-            this.btnSend.TabIndex = 3;
-            this.btnSend.Text = "Gửi";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            btnSend.Location = new Point(690, 380);
+            btnSend.Name = "btnSend";
+            btnSend.Size = new Size(80, 40);
+            btnSend.TabIndex = 3;
+            btnSend.Text = "Gửi";
+            btnSend.UseVisualStyleBackColor = true;
+            btnSend.Click += btnSend_Click;
             // 
             // fChatbot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 430);
-            this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.txtInput);
-            this.Controls.Add(this.flowLayoutPanelMessages);
-            this.Controls.Add(this.flowLayoutPanelSessions);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "fChatbot";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nhắn tin với Chatbot";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(800, 430);
+            Controls.Add(btnSend);
+            Controls.Add(txtInput);
+            Controls.Add(flowLayoutPanelMessages);
+            Controls.Add(flowLayoutPanelSessions);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "fChatbot";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Nhắn tin với Chatbot";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
