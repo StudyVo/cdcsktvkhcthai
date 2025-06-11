@@ -15,16 +15,14 @@ namespace CongDongCSKH
     {
         private BindingList<Course> courses = new BindingList<Course>();
         private int nextCourseId = 1;
+        private List<Course> courseList = new List<Course>();
         public fCourseManage()
         {
             InitializeComponent();
             dgvCourses.DataSource = courses;
-            dgvCourses.Columns["Id"].HeaderText = "Mã khóa học";
-            dgvCourses.Columns["Name"].HeaderText = "Tên khóa học";
-            dgvCourses.Columns["Description"].HeaderText = "Mô tả";
             dgvCourses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             SetupDataGridView();
-            LoadInitialData();
+
             ClearInputFields();
             UpdateButtonStates();
 
@@ -61,13 +59,7 @@ namespace CongDongCSKH
             dgvCourses.MultiSelect = false; // Chỉ cho phép chọn 1 dòng
             dgvCourses.AllowUserToAddRows = false; // Không cho người dùng tự thêm dòng trực tiếp trên Grid
         }
-        private void LoadInitialData()
-        {
-            // Dữ liệu mẫu (bạn có thể bỏ qua bước này hoặc tải từ file/database)
-            courses.Add(new Course(nextCourseId++, "Lập trình C# Cơ bản", "Khóa học dành cho người mới bắt đầu với C#"));
-            courses.Add(new Course(nextCourseId++, "Thiết kế Web với HTML & CSS", "Học cách xây dựng giao diện web tĩnh"));
-            courses.Add(new Course(nextCourseId++, "JavaScript Nâng Cao", "Tìm hiểu sâu về JavaScript và các framework phổ biến"));
-        }
+
         private void ClearInputFields()
         {
             txtCourseID.Clear();
@@ -197,6 +189,37 @@ namespace CongDongCSKH
         private void lblCourseName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void btnAdd_Click_2(object sender, EventArgs e)
+        {
+            // Sử dụng 'using' để đảm bảo form được giải phóng tài nguyên sau khi đóng
+            using (fCreateCourse createForm = new fCreateCourse())
+            {
+                // Hiển thị form tạo khóa học dưới dạng một hộp thoại (dialog)
+                // Code ở fCourseManage sẽ tạm dừng cho đến khi createForm được đóng
+                DialogResult result = createForm.ShowDialog();
+                createForm.ShowDialog(this);
+                // Kiểm tra xem người dùng đã nhấn nút "Lưu" hay chưa
+                if (result == DialogResult.OK)
+                {
+                    // Lấy khóa học mới từ thuộc tính public của createForm
+                    Course newCourse = createForm.NewCourse;
+
+
+                    courseList.Add(newCourse);
+
+                    // Hiển thị thông báo thành công
+                    MessageBox.Show($"Đã thêm thành công khóa học: {newCourse.TenKhoaHoc}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+            }
         }
     }
 }

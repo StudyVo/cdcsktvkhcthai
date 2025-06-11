@@ -239,5 +239,22 @@ namespace CongDongCSKH
 
             AddActionColumns(); // Thêm 2 nút Lock / Unlock
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Sử dụng 'using' để đảm bảo form được giải phóng tài nguyên sau khi đóng
+                using (var courseManageForm = new fCourseManage())
+                {
+                    // ShowDialog() sẽ mở form và chặn tương tác với form fUser cho đến khi form này được đóng lại
+                    courseManageForm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi mở form quản lý khóa học: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

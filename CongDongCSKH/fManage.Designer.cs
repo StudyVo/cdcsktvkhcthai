@@ -30,6 +30,7 @@
             dataGridViewMain = new DataGridView();
             labelHint = new Label();
             btXemDanhSachNguoiDung = new Button();
+            btnManageCourses = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAvatar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewMain).BeginInit();
             SuspendLayout();
@@ -37,9 +38,9 @@
             // pictureBoxAvatar
             // 
             pictureBoxAvatar.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxAvatar.Location = new Point(30, 30);
+            pictureBoxAvatar.Location = new Point(34, 30);
             pictureBoxAvatar.Name = "pictureBoxAvatar";
-            pictureBoxAvatar.Size = new Size(160, 160);
+            pictureBoxAvatar.Size = new Size(180, 160);
             pictureBoxAvatar.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxAvatar.TabIndex = 0;
             pictureBoxAvatar.TabStop = false;
@@ -47,16 +48,16 @@
             // labelHoTen
             // 
             labelHoTen.AutoSize = true;
-            labelHoTen.Location = new Point(230, 30);
+            labelHoTen.Location = new Point(259, 30);
             labelHoTen.Name = "labelHoTen";
-            labelHoTen.Size = new Size(57, 20);
+            labelHoTen.Size = new Size(58, 20);
             labelHoTen.TabIndex = 1;
             labelHoTen.Text = "Họ tên:";
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(230, 60);
+            labelEmail.Location = new Point(259, 60);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(49, 20);
             labelEmail.TabIndex = 2;
@@ -65,27 +66,27 @@
             // labelMoTa
             // 
             labelMoTa.AutoSize = true;
-            labelMoTa.Location = new Point(230, 124);
+            labelMoTa.Location = new Point(259, 124);
             labelMoTa.Name = "labelMoTa";
-            labelMoTa.Size = new Size(51, 20);
+            labelMoTa.Size = new Size(52, 20);
             labelMoTa.TabIndex = 3;
             labelMoTa.Text = "Mô tả:";
             // 
             // labelNgaySinh
             // 
             labelNgaySinh.AutoSize = true;
-            labelNgaySinh.Location = new Point(230, 90);
+            labelNgaySinh.Location = new Point(259, 90);
             labelNgaySinh.Name = "labelNgaySinh";
-            labelNgaySinh.Size = new Size(77, 20);
+            labelNgaySinh.Size = new Size(81, 20);
             labelNgaySinh.TabIndex = 4;
             labelNgaySinh.Text = "Ngày sinh:";
             // 
             // btnEditInfo
             // 
             btnEditInfo.BackColor = Color.Lime;
-            btnEditInfo.Location = new Point(1625, 30);
+            btnEditInfo.Location = new Point(1828, 30);
             btnEditInfo.Name = "btnEditInfo";
-            btnEditInfo.Size = new Size(130, 35);
+            btnEditInfo.Size = new Size(146, 35);
             btnEditInfo.TabIndex = 5;
             btnEditInfo.Text = "Sửa thông tin";
             btnEditInfo.UseVisualStyleBackColor = false;
@@ -94,9 +95,9 @@
             // btnLogout
             // 
             btnLogout.BackColor = Color.Yellow;
-            btnLogout.Location = new Point(1778, 30);
+            btnLogout.Location = new Point(2000, 30);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(130, 35);
+            btnLogout.Size = new Size(146, 35);
             btnLogout.TabIndex = 6;
             btnLogout.Text = "Đăng xuất";
             btnLogout.UseVisualStyleBackColor = false;
@@ -104,9 +105,9 @@
             // 
             // btnViewCourses
             // 
-            btnViewCourses.Location = new Point(30, 270);
+            btnViewCourses.Location = new Point(34, 270);
             btnViewCourses.Name = "btnViewCourses";
-            btnViewCourses.Size = new Size(180, 35);
+            btnViewCourses.Size = new Size(202, 35);
             btnViewCourses.TabIndex = 7;
             btnViewCourses.Text = "Xem tất cả khóa học";
             btnViewCourses.UseVisualStyleBackColor = true;
@@ -114,9 +115,9 @@
             // 
             // btnManageUsers
             // 
-            btnManageUsers.Location = new Point(30, 315);
+            btnManageUsers.Location = new Point(34, 315);
             btnManageUsers.Name = "btnManageUsers";
-            btnManageUsers.Size = new Size(180, 35);
+            btnManageUsers.Size = new Size(202, 35);
             btnManageUsers.TabIndex = 8;
             btnManageUsers.Text = "Quản lý người dùng";
             btnManageUsers.UseVisualStyleBackColor = true;
@@ -124,17 +125,17 @@
             // 
             // btnPosts
             // 
-            btnPosts.Location = new Point(1344, 206);
+            btnPosts.Location = new Point(1512, 206);
             btnPosts.Name = "btnPosts";
-            btnPosts.Size = new Size(78, 26);
+            btnPosts.Size = new Size(88, 26);
             btnPosts.TabIndex = 9;
             btnPosts.Text = "Post";
             // 
             // btnMessage
             // 
-            btnMessage.Location = new Point(30, 405);
+            btnMessage.Location = new Point(34, 405);
             btnMessage.Name = "btnMessage";
-            btnMessage.Size = new Size(180, 35);
+            btnMessage.Size = new Size(202, 35);
             btnMessage.TabIndex = 10;
             btnMessage.Text = "Nhắn tin";
             btnMessage.UseVisualStyleBackColor = true;
@@ -142,9 +143,9 @@
             // 
             // btnChatbot
             // 
-            btnChatbot.Location = new Point(30, 450);
+            btnChatbot.Location = new Point(35, 508);
             btnChatbot.Name = "btnChatbot";
-            btnChatbot.Size = new Size(180, 35);
+            btnChatbot.Size = new Size(202, 35);
             btnChatbot.TabIndex = 11;
             btnChatbot.Text = "Chat với AI (Gemini)";
             btnChatbot.UseVisualStyleBackColor = true;
@@ -153,10 +154,10 @@
             // dataGridViewMain
             // 
             dataGridViewMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewMain.Location = new Point(216, 270);
+            dataGridViewMain.Location = new Point(243, 270);
             dataGridViewMain.Name = "dataGridViewMain";
             dataGridViewMain.RowHeadersWidth = 51;
-            dataGridViewMain.Size = new Size(1737, 600);
+            dataGridViewMain.Size = new Size(1954, 600);
             dataGridViewMain.TabIndex = 0;
             dataGridViewMain.CellContentClick += dataGridViewMain_CellContentClick;
             // 
@@ -164,27 +165,38 @@
             // 
             labelHint.AutoSize = true;
             labelHint.ForeColor = Color.Red;
-            labelHint.Location = new Point(34, 236);
+            labelHint.Location = new Point(38, 236);
             labelHint.Name = "labelHint";
-            labelHint.Size = new Size(307, 20);
+            labelHint.Size = new Size(314, 20);
             labelHint.TabIndex = 12;
             labelHint.Text = "Chọn các chức năng bên dưới để xem chi tiết";
             // 
             // btXemDanhSachNguoiDung
             // 
-            btXemDanhSachNguoiDung.Location = new Point(30, 365);
+            btXemDanhSachNguoiDung.Location = new Point(34, 365);
             btXemDanhSachNguoiDung.Name = "btXemDanhSachNguoiDung";
-            btXemDanhSachNguoiDung.Size = new Size(180, 29);
+            btXemDanhSachNguoiDung.Size = new Size(202, 29);
             btXemDanhSachNguoiDung.TabIndex = 13;
             btXemDanhSachNguoiDung.Text = "Xem tất cả bài đăng";
             btXemDanhSachNguoiDung.UseVisualStyleBackColor = true;
             btXemDanhSachNguoiDung.Click += btXemDanhSachNguoiDung_Click;
             // 
+            // btnManageCourses
+            // 
+            btnManageCourses.Location = new Point(38, 458);
+            btnManageCourses.Name = "btnManageCourses";
+            btnManageCourses.Size = new Size(198, 29);
+            btnManageCourses.TabIndex = 15;
+            btnManageCourses.Text = "Quản lí khoá học";
+            btnManageCourses.UseVisualStyleBackColor = true;
+            btnManageCourses.Click += button2_Click;
+            // 
             // fManage
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 900);
+            ClientSize = new Size(2160, 900);
+            Controls.Add(btnManageCourses);
             Controls.Add(btXemDanhSachNguoiDung);
             Controls.Add(pictureBoxAvatar);
             Controls.Add(labelHoTen);
@@ -226,5 +238,6 @@
         private System.Windows.Forms.DataGridView dataGridViewMain;
         private System.Windows.Forms.Label labelHint;
         private Button btXemDanhSachNguoiDung;
+        private Button btnManageCourses;
     }
 }
